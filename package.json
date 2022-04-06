@@ -1,0 +1,8 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "simple note app",
+  "main": "index.js",
+  "author": "joe pennock",
+  "license": "MIT"
+}
