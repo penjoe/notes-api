@@ -20,3 +20,5 @@ If you are creating a module to deploy at NPM, you'll want a "bin" section that 
 Additionally, that file should have as it's first line, so that it'll run without having to type "node filename.js" every time
 
 #!/usr/bin/env node
+
+use ansi-colors npm package for adding color to the terminal
