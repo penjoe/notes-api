@@ -12,12 +12,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // set up test route
 app.get('/testme', (req, res) => {
-  res.status(200).json({hello: world})
+  res.status(200).send('Hello world')
 });
 
 // get server listening for requests
-function start() {
-  app.listen( (port) => {
+function start(port) {
+  app.listen(port, () => {
     console.log(`server listening on port ${port}`);
   })
 }
