@@ -2,18 +2,21 @@
 
 // dependencies
 const express = require('express');
+const cors = require('cors');
 
 // create instance of express
 const app = express();
 
+// import custom modules
+const router = require('./routes/note.routes.js');
+
 // express middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-// set up test route
-app.get('/', (req, res) => {
-  res.status(200).send('Hello world')
-});
+// use express router
+app.use('/api/v1', router);
 
 // get server listening for requests
 function start(port) {
@@ -26,4 +29,4 @@ function start(port) {
 module.exports = {
   start,
   app
-}
+};
