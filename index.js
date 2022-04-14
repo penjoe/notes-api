@@ -7,7 +7,7 @@ require('dotenv').config();
 const server = require('./src/server.js');
 
 // import postgres connection
-const pg = require('./src/database/index.js');
+const pg = require('./src/config/database.js');
 
 //start server function
-server.start(process.env.PORT || 5001)
+server.start(process.env.PORT || 5001);
