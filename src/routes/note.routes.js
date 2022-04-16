@@ -19,5 +19,6 @@ router.post('/notes', noteController.createNote);
 router.put('/notes/:id', noteController.updateNote);
 
 // /DELETE:id - delete single note via id
+router.delete('/notes/:id', noteController.deleteNote);
 
 module.exports = router;
