@@ -18,3 +18,9 @@ exports.createNote = async (req, res, next) => {
     },
   });
 };
+
+exports.listAllNotes = async (req, res, next) => {
+  const response = await db.query('SELECT * FROM notes ORDER BY noteTitle ASC');
+
+  res.status(200).send(response.rows);
+}
