@@ -16,6 +16,7 @@ router.get('/notes/:id', noteController.findNoteById);
 router.post('/notes', noteController.createNote);
 
 // /PUT:id - update note via id
+router.put('/notes/:id', noteController.updateNote);
 
 // /DELETE:id - delete single note via id
 
