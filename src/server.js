@@ -8,6 +8,7 @@ const cors = require('cors');
 const app = express();
 
 // import custom modules
+const index = require('./routes/index.js');
 const router = require('./routes/note.routes.js');
 
 // express middleware
@@ -16,6 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // use express router
+app.use(index);
+
+// using express-promise-router
 app.use('/api/v1', router);
 
 // get server listening for requests

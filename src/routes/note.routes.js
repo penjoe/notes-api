@@ -1,23 +1,18 @@
 'use strict';
 
 // dependencies
-const express = require('express');
-const router = express.Router();
+const router = require('express-promise-router')();
 
-// test route
-router.get('/testme', (req, res) => {
-  res.status(200).send({
-    success: true,
-    message: 'hello from the router!',
-    version: '1.0.0'
-  });
-});
+// import custom controllers
+const noteController = require('../controllers/note.controller.js');
 
 // /GET - get all notes
+// router.get('/notes', noteController.listAllNotes)
 
 // /GET:id - get one note by id
 
 // /POST - add new note
+router.post('/notes', noteController.createNote)
 
 // /PUT:id - update note via id
 
