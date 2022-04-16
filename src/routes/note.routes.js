@@ -7,12 +7,13 @@ const router = require('express-promise-router')();
 const noteController = require('../controllers/note.controller.js');
 
 // /GET - get all notes
-router.get('/notes', noteController.listAllNotes)
+router.get('/notes', noteController.listAllNotes);
 
 // /GET:id - get one note by id
+router.get('/notes/:id', noteController.findNoteById);
 
 // /POST - add new note
-router.post('/notes', noteController.createNote)
+router.post('/notes', noteController.createNote);
 
 // /PUT:id - update note via id
 
