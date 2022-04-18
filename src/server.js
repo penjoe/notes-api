@@ -16,10 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// use express router
+// test route
 app.use(index);
 
-// using express-promise-router
+// CRUD note routes
 app.use('/api/v1', router);
 
 // get server listening for requests

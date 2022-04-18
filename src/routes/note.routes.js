@@ -1,16 +1,17 @@
 'use strict';
 
 // dependencies
-const router = require('express-promise-router')();
+const express = require('express');
+const router = express.Router();
 
 // import custom controllers
-const noteController = require('../controllers/note.controller.js');
+const noteController = require('../controllers/index.js');
 
 // /GET - get all notes
-router.get('/notes', noteController.listAllNotes);
+router.get('/notes', noteController.listAll);
 
 // /GET:id - get one note by id
-router.get('/notes/:id', noteController.findNoteById);
+router.get('/notes/:id', noteController.listOne);
 
 // /POST - add new note
 router.post('/notes', noteController.createNote);
